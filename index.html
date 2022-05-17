@@ -5,8 +5,291 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <!-- front-awsome-cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-    <h1>Hello world</h1>
+
+    <!-- custom cursur -->
+    <div class="cursor-1"></div>
+    <div class="cursor-2"></div>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <!-- header section starts -->
+    <header>
+        <a href="#" class="logo"> <span>Souvik</span> Acharya</a>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#service">Service</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="follow">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-instagram"></a>
+        </div>
+    </header>
+    <!-- header section ends -->
+
+    <!-- Home section starts -->
+    <section class="home" id="home">
+        <div class="content">
+            <span class="hi">hi there...</span>
+            <h3>i am <span>souvik acharya</span></h3>
+            <p class="info"><span>mern</span> stack developer</p>
+            <p class="text">An enthusiastic, ambitious and hardworking
+                individual, with broad skills and experience in
+                web developemnt, web desing, problem solveing 
+                and leading projects.</p>
+            <a href="#about" class="btn">about me</a>
+        </div>
+        <div class="pic">
+            <img src="./files/profile_pic.jpg" alt="profile-pic" width="200px">
+        </div>
+    </section>
+    <!-- Home section ends -->
+
+    <!-- About section starts -->
+    <section class="about pt-5" id="about">
+        <h1 class="heading">about <span>me</span></h1>
+        <div class="row_1">
+            <div class="pic">
+                <img src="./files/profile_pic.jpg" alt="profile pic" width="200px">
+            </div>
+            <div class="content">
+                <h3>my name is souvik acharya and i am MERN stack developer</h3>
+                <p> I am adeptat handling multiple tasks on a daily basis
+                    competently and at working well under
+                    pressure. A key strength is communication;
+                    building strong relationships with people in
+                    order to deliver the best results.</p>
+                    <div class="box_container">
+                        <div class="box">
+                            <h2 class="pb-5">education</h2>
+                            <p><span>icse: </span>77%</p>
+                            <p><span>whbhce: </span>72%</p>
+                            <p><span>bca: </span>84.5%</p>
+                        </div>
+                        <div class="box">
+                            <h2 class="pb-5">contact</h2>
+                            <p><span>address: </span>vill- dhangdang, po- kuniara</p>
+                            <p><span>phone: </span><a href="tel:+919064347980">+919064347980</a></p>
+                            <p><span>mail: </span><a href = "mailto: souvikacharya78@gmail.com">souvikacharya78@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <a href="#" class="btn">download CV</a>
+                        <a href="#" class="btn">hire me</a>
+                    </div>
+            </div>
+        </div>
+        <h1 class="heading2">my<span> skills</span></h1>
+        <div class="row_2">
+            <div class="skills">
+                <div class="progress">
+                    <h3>Javascript <span>75%</span></h3>
+                    <div class="bar"><span></span></div>
+                </div>
+                <div class="progress">
+                    <h3>HTML/CSS <span>85%</span></h3>
+                    <div class="bar"><span></span></div>
+                </div>
+                <div class="progress">
+                    <h3>C/C++ <span>80%</span></h3>
+                    <div class="bar"><span></span></div>
+                </div>
+                <div class="progress">
+                    <h3>MERN stack <span>83%</span></h3>
+                    <div class="bar"><span></span></div>
+                </div>
+            </div>
+            <div class="box_container">
+                <div class="box">
+                    <h3>GFG</h3>
+                    <p>330+</p>
+                </div>
+                <div class="box">
+                    <h3>Github</h3>
+                    <p>100+</p>
+                </div>
+                <div class="box">
+                    <h3>Hackthons</h3>
+                    <p>5+</p>
+                </div>
+                <div class="box">
+                    <h3>Swags</h3>
+                    <p>10+</p>
+                </div>
+                <!-- <div class="box">
+                    <div class="content">
+                        <span>2016-2017</span>
+                        <h3>ICSE</h3>
+                        <p>77%</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="content">
+                        <span>2016-2017</span>
+                        <h3>ICSE</h3>
+                        <p>77%</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="content">
+                        <span>2016-2017</span>
+                        <h3>ICSE</h3>
+                        <p>77%</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <!-- About section ends -->
+
+    <!-- Projects section stards -->
+    <section class="projects pt-5" id="projects">
+        <h1 class="heading">my <span>projects</span></h1>
+        <div class="box_container">
+            <div class="box">
+                <img src="./files/auto-school.jpeg" alt="" width="200px">
+                <h3>Auto-Mobile Website</h3>
+                <div class="icons">
+                    <a href="https://alkalk00.github.io/Cars-Site/" class="fas fa-link"></a>
+                    <a href="https://alkalk00.github.io/Cars-Site/" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./files/calculator.jpeg" alt="" width="200px">
+                <h3>calculator web app</h3>
+                <div class="icons">
+                    <a href="https://alkalk00.github.io/Calculator/" class="fas fa-link"></a>
+                    <a href="https://alkalk00.github.io/Calculator/" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./files/foody-cums.jpeg" alt="" width="200px">
+                <h3>Food Delivery Website</h3>
+                <div class="icons">
+                    <a href="https://alkalk00.github.io/Delivery_foods_site/" class="fas fa-link"></a>
+                    <a href="https://alkalk00.github.io/Delivery_foods_site/" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./files/QuizApp.jpeg" alt="" width="200px">
+                <h3>Quiz application</h3>
+                <div class="icons">
+                    <a href="https://alkalk00.github.io/Quiz-App/" class="fas fa-link"></a>
+                    <a href="https://alkalk00.github.io/Quiz-App/" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./files/tic-tac-toe.jpeg" alt="" width="200px">
+                <h3>Tic-Tac-Toe Game</h3>
+                <div class="icons">
+                    <a href="https://alkalk00.github.io/Tic-Tac-Toe/" class="fas fa-link"></a>
+                    <a href="https://alkalk00.github.io/Tic-Tac-Toe/" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./files/weather-reapoter.jpeg" alt="" width="200px">
+                <h3>Weather Reporter</h3>
+                <div class="icons">
+                    <a href="https://alkalk00.github.io/Weather-Reporter/" class="fas fa-link"></a>
+                    <a href="https://alkalk00.github.io/Weather-Reporter/" class="fas fa-share"></a>
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <a href="https://github.com/alkalk00" class="btn">View More...</a>
+        </div>
+    </section>
+    <!-- Projects section ends -->
+
+    <!-- service section starts -->
+    <section class="service" id="service">
+        <h1 class="heading">my <span>service</span></h1>
+        <div class="box_container">
+            <div class="box">
+                <i class="fa fa-globe" aria-hidden="true"></i>
+                <h3>web developer</h3>
+                <p>I am happy to help and contribue other develops</p>
+            </div>
+            <div class="box">
+                <i class="fab fa-github" aria-hidden="true"></i>
+                <h3>Repostories contribution</h3>
+                <p>contribution to other repostories with other develops</p>
+            </div>
+            <div class="box">
+                <i class="fa fa-code" aria-hidden="true"></i>
+                <h3>Coding</h3>
+                <p>Problem solving throug programming problems</p>
+            </div>
+            <div class="box">
+                <i class="fa fa-code" aria-hidden="true"></i>
+                <h3>Coding</h3>
+                <p>Problem solving throug programming problems</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-mobile" aria-hidden="true"></i>
+                <h3>Responsive Design</h3>
+                <p>creaing mobile firendly website and designs</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <h3>social marketing</h3>
+                <p>marketing through social media apps, links, etc</p>
+            </div>
+        </div>
+    </section>
+    <!-- service section ends -->
+    
+    <!-- contact section starts -->
+    <section class="contact" id="contact">
+        <h1 class="heading">contact <span>me</span></h1>
+        <div class="icons_container">
+            <div class="icons">
+                <i class="fas fa-envelope"></i>
+                <h3>my email</h3>
+                <p>souvikacharya78@gmail.com</p>
+            </div>
+            <div class="icons">
+                <i class="fas fa-phone"></i>
+                <h3>my phone</h3>
+                <p>+919732020924</p>
+            </div>
+            <div class="icons">
+                <i class="fas fa-map-marker"></i>
+                <h3>my address</h3>
+                <p>labour, birbhum, 731303</p>
+            </div>
+        </div>
+        <div class="row">
+            <form action="">
+                <input type="text" name="name" class="box" placeholder="Name">
+                <input type="email" name="email" class="box" placeholder="Email">
+                <input type="number" name="number" class="box" placeholder="Phone">
+                <textarea name="" cols="30" rows="10" placeholder="message"></textarea>
+                <input type="submit" value="send message" class="btn">
+            </form>
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14600.264651259402!2d87.79050343038213!3d23.816246202909625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f9ebbb155d32bd%3A0x20fcf6bcc9649e4d!2sLabpur%2C%20West%20Bengal%20731303!5e0!3m2!1sen!2sin!4v1652816476180!5m2!1sen!2sin"
+            allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+    <!-- contact section ends -->
+
+    <!-- footer section s -->
+    <footer>created by <span>souvik acharya</span> all rights reserved</footer>
+    <!-- footer section e -->
+
+    <!-- custom js link -->
+    <script src="./script/script.js"></script>
 </body>
 </html>
