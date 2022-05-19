@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,11 @@
     <title>Portfolio</title>
     <!-- front-awsome-cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    
+
     <!-- custom css file link -->
     <link rel="stylesheet" href="./style/style.css">
 </head>
+
 <body>
 
     <!-- custom cursur -->
@@ -47,7 +49,7 @@
             <p class="info"><span>mern</span> stack developer</p>
             <p class="text">An enthusiastic, ambitious and hardworking
                 individual, with broad skills and experience in
-                web developemnt, web desing, problem solveing 
+                web developemnt, web desing, problem solveing
                 and leading projects.</p>
             <a href="#about" class="btn">about me</a>
         </div>
@@ -71,24 +73,29 @@
                     pressure. A key strength is communication;
                     building strong relationships with people in
                     order to deliver the best results.</p>
-                    <div class="box_container">
-                        <div class="box">
-                            <h2 class="pb-5">education</h2>
-                            <p><span>icse: </span>77%</p>
-                            <p><span>whbhce: </span>72%</p>
-                            <p><span>bca: </span>84.5%</p>
-                        </div>
-                        <div class="box">
-                            <h2 class="pb-5">contact</h2>
-                            <p><span>address: </span>vill- dhangdang, po- kuniara</p>
-                            <p><span>phone: </span><a href="tel:+919064347980">+919064347980</a></p>
-                            <p><span>mail: </span><a href = "mailto: souvikacharya78@gmail.com">souvikacharya78@gmail.com</a></p>
-                        </div>
+                <div class="box_container">
+                    <div class="box">
+                        <h2 class="pb-5">education</h2>
+                        <p><span>icse: </span>77%</p>
+                        <p><span>whbhce: </span>72%</p>
+                        <p><span>bca: </span>84.5%</p>
                     </div>
-                    <div class="buttons">
-                        <a href="#" class="btn">download CV</a>
-                        <a href="#" class="btn">hire me</a>
+                    <div class="box">
+                        <h2 class="pb-5">contact</h2>
+                        <p><span>address: </span>vill- dhangdang, po- kuniara</p>
+                        <p><span>phone: </span><a href="tel:+919064347980">+919064347980</a></p>
+                        <p><span>mail: </span><a href="mailto: souvikacharya78@gmail.com">souvikacharya78@gmail.com</a>
+                        </p>
                     </div>
+                </div>
+                <div class="buttons">
+                    <a href="/files/resume_me.pdf" class="btn">download CV</a>
+                    <a href="" class="btn">hire me
+                        <form onsubmit="TwilioNameLookup()" class="hid">
+                            <input name="to" value="919064347980" autofocus>
+                        </form>
+                    </a>
+                </div>
             </div>
         </div>
         <h1 class="heading2">my<span> skills</span></h1>
@@ -250,7 +257,7 @@
         </div>
     </section>
     <!-- service section ends -->
-    
+
     <!-- contact section starts -->
     <section class="contact" id="contact">
         <h1 class="heading">contact <span>me</span></h1>
@@ -279,8 +286,9 @@
                 <textarea name="" cols="30" rows="10" placeholder="message"></textarea>
                 <input type="submit" value="send message" class="btn">
             </form>
-            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14600.264651259402!2d87.79050343038213!3d23.816246202909625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f9ebbb155d32bd%3A0x20fcf6bcc9649e4d!2sLabpur%2C%20West%20Bengal%20731303!5e0!3m2!1sen!2sin!4v1652816476180!5m2!1sen!2sin"
-            allowfullscreen="" loading="lazy"></iframe>
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14600.264651259402!2d87.79050343038213!3d23.816246202909625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f9ebbb155d32bd%3A0x20fcf6bcc9649e4d!2sLabpur%2C%20West%20Bengal%20731303!5e0!3m2!1sen!2sin!4v1652816476180!5m2!1sen!2sin"
+                allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
     <!-- contact section ends -->
@@ -291,5 +299,31 @@
 
     <!-- custom js link -->
     <script src="./script/script.js"></script>
+    <script>
+        const YOUR_RAPID_API_KEY_GOES_HERE = '4b2da63670msh0cf7d95281ef387p19874fjsn20cc19ecc9b8';
+        async function TwilioNameLookup(event) {
+            event.preventDefault();
+            const form = event.target;
+            const to = form.querySelector('[name=to]').value;
+            const result = await fetch("https://twilio-lookup.p.rapidapi.com/PhoneNumbers/caller-name?phoneNumber=" + to, {
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "twilio-lookup.p.rapidapi.com",
+                    "x-rapidapi-key": YOUR_RAPID_API_KEY_GOES_HERE
+                }
+            });
+            const body = await result.json();
+            console.log(body);
+            if (body.callerName) {
+                const name = body.callerName.caller_name;
+                const kind = body.callerName.caller_type;
+                alert(`Name: ${name}n` + `Kind: ${kind}`);
+            }
+            else {
+                alert('Something went wrong!nn' + body.message);
+            }
+        }
+    </script>
 </body>
+
 </html>
